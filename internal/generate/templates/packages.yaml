@@ -1,0 +1,29 @@
+# list of packages to be installed on target, slack specific
+---
+- name: nginx
+  version: latest
+  kind: service
+  files:
+    - path: /etc/nginx/sites-available/default
+      name: default
+      mode: 0644
+      owner: root:root
+      content: embed://templates/etc_nginx_sites_available_default
+  parameters:
+    PhpFpmVersion: 7.2
+- name: php7.2-fpm
+  version: 7.2
+  kind: service
+  files:
+    - path: /var/www/html/info.php
+      mode: 0777
+      owner: root:root
+      content: |
+        <?php
+        phpinfo();
+        ?>
+- path:
+    path: /var/www/html/index.php
+    mode: 0777
+    owner: root:root
+    content: embed://templates/var_www_html_index_php

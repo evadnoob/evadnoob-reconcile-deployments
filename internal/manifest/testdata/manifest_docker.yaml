@@ -1,0 +1,4 @@
+---
+# manifests describe a desired deployment, very simplified
+provider: docker
+id: b4c70efab4

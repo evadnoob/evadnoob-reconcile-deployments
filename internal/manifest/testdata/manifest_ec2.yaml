@@ -1,0 +1,10 @@
+---
+# a host manifest for an ec2 reconcile
+provider: ec2
+id: d1be04bd12
+parameters:
+  size: t4g.nano
+  image-id: test-image-id
+  key-name: test-key-name
+  security-group-id: sg-test
+  subnet-id: test-subnet-id

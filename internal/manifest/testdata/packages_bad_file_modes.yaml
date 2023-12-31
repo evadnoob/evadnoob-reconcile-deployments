@@ -1,0 +1,27 @@
+# list of packages to be installed on target
+---
+  - name: netcat-traditional
+    version: latest
+    kind: binary
+  - name: dnsutils
+    version: latest
+    kind: binary
+  - name: nginx
+    version: latest
+    kind: service
+    files:
+    - path: /etc/nginx/sites-available/default
+      mode: 77777777
+      owner: root:root
+      content: embed://templates/etc_nginx_sites_available_default
+  - name: php8.2-fpm
+    version: "8.2"
+    kind: service
+    files:
+    - path: /var/www/html/info.php
+      mode: +rw
+      owner: root:root
+      content: |
+          <?php
+          phpinfo();
+          ?>

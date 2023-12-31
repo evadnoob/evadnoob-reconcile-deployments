@@ -1,0 +1,10 @@
+# a host manifest for linode
+---
+provider: linode
+id: 53580639
+parameters:
+  size: g6-nanode-1
+  image-id: linode/debian11
+  private-key-path: /Users/davidboon/.ssh/id_rsa
+  public-key-path: /Users/davidboon/.ssh/id_rsa.pub
+  region: us-sea

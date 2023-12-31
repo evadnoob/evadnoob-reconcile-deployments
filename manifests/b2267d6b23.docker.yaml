@@ -1,0 +1,5 @@
+# a minimal manifest with docker as the provider for 
+# use with reconcile 
+---
+provider: docker
+id: b2267d6b23

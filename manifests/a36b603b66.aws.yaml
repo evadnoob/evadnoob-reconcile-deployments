@@ -1,0 +1,11 @@
+# a host manifest for e2c
+---
+provider: ec2
+id: a36b603b66
+parameters:
+  size: t4g.nano
+  image-id: ami-0c758b376a9cf7862
+  key-name: davidboon
+  private-key-path: /Users/davidboon/Downloads/davidboon.pem
+  security-group-id: sg-0570796ee4a09206c
+  subnet-id: subnet-0d2460af28a1a564a
